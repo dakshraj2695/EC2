@@ -1,0 +1,11 @@
+{
+  "name": "sample-nodejs-app",
+  "version": "1.0.0",
+  "description": "A sample Node.js application",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "http": "^1.1.0"
+  }
+}

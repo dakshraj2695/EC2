@@ -1,6 +1,6 @@
 
 provider "aws" {
-  region = "us-east-1" # Update with your desired region
+  region = "ap-south-1"                                                                                 
 }
 resource "aws_key_pair" "my_key_pair" {                                                                   # Creating a key pair for SSH access
   public_key = <<EOF
@@ -25,7 +25,7 @@ resource "aws_security_group" "allow_ssh" {                                     
     cidr_blocks = ["0.0.0.0/0"]
   }
 }
-resource "aws_instance" "my_instance" {                                                                           # Creating the EC2 instance
+resource "aws_instance" "my_demo_server" {                                                                           # Creating the EC2 instance
   ami           = "ami-0beeff992b88e8822"                                                                          # example AMI ID
   instance_type = "t2.micro" 
   key_name     = aws_key_pair.my_key_pair.public_key
